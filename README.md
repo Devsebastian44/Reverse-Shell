@@ -23,7 +23,7 @@ Este proyecto incluye scripts para configurar una reverse shell en **Windows** y
 Clona el repositorio y accede al directorio:
 
 ```bash
-git clone https://github.com/bl4ck44/Reverse-Shell.git
+git clone https://github.com/Devsebastian44/Reverse-Shell.git
 cd Reverse-Shell
 ```
 
