@@ -1,40 +1,84 @@
-# Reverse Shell
+## Reverse Shell
 
 <p align="center">
-<img src="Logotipo.png">
+  <img src="./Img/Logo.png" height="300px" width="350px">
 </p>
 
-Una reverse shell (o "shell inversa") es una técnica utilizada en ciberseguridad y piratería informática que implica establecer una conexión entre un atacante y una máquina objetivo, permitiendo al atacante ejecutar comandos en la máquina remota de forma remota. Esta técnica es comúnmente utilizada por los hackers para obtener acceso no autorizado a sistemas informáticos y tomar el control de ellos.
+Una **reverse shell** es una técnica utilizada en ciberseguridad que permite establecer una conexión entre un atacante y una máquina objetivo, otorgando acceso remoto para ejecutar comandos.  
+Este proyecto incluye scripts para configurar una reverse shell en **Windows** y **Linux** con fines educativos.
 
-## Windows 10
+---
 
-### Requisistos:
+## ⚙️ Requisitos
 
-* Python3
+- Linux (Ubuntu/Kali recomendado)
+- Python 3.8 o superior
+- Visual Studio Code (para edición en Windows)
+- Netcat (para escuchar conexiones en Linux)
 
-* Visual Studio Code
+---
 
-Descargar el resporitorio luego ejecutar el archivo **config.bat** para configurar la reverse shell, en windows 10.
+## 🚀 Instalación
+
+Clona el repositorio y accede al directorio:
+
+```bash
+git clone https://github.com/bl4ck44/Reverse-Shell.git
+cd Reverse-Shell
+```
+
+---
+
+## ▶️ Uso
+
+En la máquina del atacante linux se debe ejecutar el siguiente comando:
 
 
-### Configuración
+### Linux
 
-Para configuirar la reverse shell para windows debes configurar la IP del atacante en el archivo **shell.py** al igual que debes configurar la IP para linux en el archivo **shell.sh**:
+Ejecuta el archivo de configuración:
+
+```bash
+sudo chmod +x config.sh
+sudo bash config.sh
+```
+
+
+Configura la IP del atacante en `shell.py` (Windows) o `shell.sh` (Linux) dependiendo a que máquina se va atacar:
 
 <p align="center">
-<img src="./Img/config2.png">
+  <img src="./Img/config2.png">
 </p>
 
-Luego en nuestra maquina atacante **Linux** usaremos netcat para escuchar la conexión de la reverse shell mediante el puerto 4444.
+Luego escucha la conexión con netcat en Linux (máquina atacante):
 
-```nc
+```bash
 nc -lvnp 4444
 ```
 
-### ⚠️ **Aviso**
+---
 
-Este script ha sido desarrollado únicamente con fines **educativos y de investigación en ciberseguridad**.
+## 📂 Estructura del proyecto
 
-No me responsabilizo del mal uso que se pueda dar ni de los daños que puedan ocasionarse por su ejecución.
+```
+Reverse-Shell/
+│── scripts/           # Carpeta con los scripts de la reverse shell
+│   │── shell.py       # Script de reverse shell para Windows
+│   │── shell.sh       # Script de reverse shell para Linux
+│── config.bat         # Configuración inicial en 
+``` 
 
-El uso indebido de este material puede ser **ilegal**.
+---
+
+## 📜 Licencia
+
+Este proyecto está bajo la licencia MIT.  
+Puedes usarlo libremente con fines educativos y de investigación.
+
+---
+
+## ⚠️ Aviso
+
+Este script ha sido desarrollado únicamente con fines **educativos y de investigación en ciberseguridad**.  
+El uso indebido de este material puede ser **ilegal**.  
+No me responsabilizo del mal uso ni de los daños que puedan ocasionarse por su ejecución.
